@@ -1,305 +1,427 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Start Your Café Journey</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>yuvapreneur.in — Start your Cafe Journey</title>
+  <meta name="description" content="12 modules • 90+ lessons • Proven roadmap. Read‑only eBook course with secure account access and Razorpay checkout." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <style>
-    :root {
-      --primary: #673ab7;
-      --accent: #ff6f00;
-      --light-bg: #f9f9f9;
-      --card-bg: #ffffff;
-      --shadow: 0 2px 10px rgba(0,0,0,0.1);
-    }
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-    body {
-      font-family: 'Inter', sans-serif;
-      background-color: #fff;
-      color: #333;
-      line-height: 1.6;
-    }
-    header {
-      background: var(--primary);
-      color: white;
-      padding: 40px 20px;
-      text-align: center;
-    }
-    header h1 {
-      font-size: 2.5rem;
-    }
-    .cta {
-      background: var(--accent);
-      color: white;
-      padding: 12px 30px;
-      font-weight: 600;
-      border-radius: 8px;
-      text-decoration: none;
-      display: inline-block;
-      margin: 20px 0;
-    }
-    .hero {
-      text-align: center;
-      padding: 50px 20px;
-      background-color: var(--light-bg);
-    }
-    .hero h2 {
-      font-size: 2rem;
-      margin-bottom: 10px;
-    }
-    .hero p {
-      font-size: 1.1rem;
-      margin-bottom: 20px;
-    }
-    .hero img {
-      max-width: 100%;
-      height: auto;
-      border-radius: 12px;
-      box-shadow: var(--shadow);
-      margin-top: 30px;
-    }
-    .progress-bar {
-      width: 80%;
-      max-width: 400px;
-      height: 14px;
-      background: #ddd;
-      margin: 20px auto;
-      border-radius: 7px;
-    }
-    .progress {
-      width: 76%;
-      height: 100%;
-      background: var(--primary);
-      border-radius: 7px;
-    }
-    section {
-      max-width: 1000px;
-      margin: 40px auto;
-      padding: 0 20px;
-    }
-    .card-box {
-      background: var(--card-bg);
-      padding: 30px;
-      margin-bottom: 40px;
-      border-radius: 12px;
-      box-shadow: var(--shadow);
-      border-left: 5px solid var(--primary);
-    }
-    .card-box h2 {
-      margin-bottom: 15px;
-      color: var(--primary);
-    }
-    .price-grid {
-      display: flex;
-      justify-content: center;
-      gap: 20px;
-      flex-wrap: wrap;
-    }
-    .price-box {
-      background: #fff;
-      border: 2px solid var(--accent);
-      padding: 30px;
-      border-radius: 12px;
-      text-align: center;
-      flex: 1;
-      min-width: 250px;
-      box-shadow: var(--shadow);
-    }
-    .price-box h3 {
-      color: var(--primary);
-      margin-bottom: 10px;
-    }
-    .form, .faq, footer {
-      background: var(--light-bg);
-      padding: 40px 20px;
-    }
-    input {
-      width: 100%;
-      padding: 12px;
-      border-radius: 6px;
-      border: 1px solid #ccc;
-      margin-bottom: 20px;
-    }
-    form button {
-      width: 100%;
-    }
-    footer {
-      text-align: center;
-      font-size: 14px;
-    }
-    .sticky-cta {
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      background: var(--accent);
-      color: white;
-      padding: 15px 25px;
-      border-radius: 50px;
-      box-shadow: var(--shadow);
-      text-decoration: none;
-      font-weight: 600;
-    }
+    :root{--bg:#f8fafc;--card:#ffffff;--ink:#0f172a;--muted:#475569;--line:#e2e8f0;--accent:#0f172a;--brand:#0f172a;--warn:#f59e0b}
+    *{box-sizing:border-box}
+    html,body{margin:0;padding:0;background:var(--bg);color:var(--ink);font-family:Inter,system-ui,Segoe UI,Roboto,Arial,sans-serif}
+    a{color:inherit}
+    .container{max-width:1120px;margin:0 auto;padding:0 16px}
+    .btn{display:inline-flex;align-items:center;gap:8px;border:none;border-radius:16px;padding:12px 18px;font-weight:600;cursor:pointer}
+    .btn-primary{background:var(--brand);color:#fff}
+    .btn-outline{background:#fff;border:1px solid var(--line);color:var(--ink)}
+    .badge{display:inline-flex;align-items:center;gap:8px;border:1px solid var(--line);background:#f1f5f9;color:#334155;font-size:12px;border-radius:999px;padding:6px 10px;text-transform:uppercase;letter-spacing:.06em}
+    .grid{display:grid;gap:24px}
+    .grid-2{grid-template-columns:1fr}
+    @media(min-width:900px){.grid-2{grid-template-columns:1fr 1fr}}
+    .card{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:20px;box-shadow:0 1px 2px rgba(0,0,0,.03)}
+    .hero h1{font-size:40px;line-height:1.1;margin:16px 0 0}
+    @media(min-width:900px){.hero h1{font-size:52px}}
+    .muted{color:var(--muted)}
+    .pill{display:inline-flex;align-items:center;gap:8px;border-radius:999px;background:#fffbeb;border:1px solid #fde68a;padding:6px 10px;font-size:14px}
+    ul.clean{list-style:none;margin:0;padding:0}
+    .list{list-style:disc;padding-left:20px;color:#334155}
+    .module{display:flex;gap:12px}
+    .module-index{min-width:36px;height:36px;border-radius:12px;background:#f1f5f9;display:grid;place-items:center;font-weight:600}
+    header.top{position:sticky;top:0;z-index:20;background:rgba(255,255,255,.8);backdrop-filter:saturate(180%) blur(10px);border-bottom:1px solid var(--line)}
+    header .row{display:flex;align-items:center;justify-content:space-between;padding:12px 0}
+    .logo{font-weight:700;font-size:20px;display:flex;align-items:center;gap:8px}
+    .hidden{display:none}
+    .input{display:flex;align-items:center;gap:8px;border:1px solid var(--line);border-radius:12px;padding:10px 12px;background:#fff}
+    .input input{border:none;outline:0;width:100%;font-size:14px}
+    .two{display:grid;grid-template-columns:1fr;gap:16px}
+    @media(min-width:720px){.two{grid-template-columns:1fr 1fr}}
+    .small{font-size:12px}
+    .center{text-align:center}
+    .footer{border-top:1px solid var(--line);margin-top:48px;padding:32px 0}
+    .priceTag{display:flex;align-items:center;gap:12px;background:#0f172a;color:#fff;border-radius:16px;padding:12px 16px}
+    .rupee{font-weight:700;font-size:22px}
+    .kbd{font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,monospace;font-size:12px;background:#f1f5f9;border:1px solid var(--line);border-bottom-width:2px;border-radius:6px;padding:2px 6px}
+    /* Reader hardening hints */
+    #reader{user-select:none}
+    #reader img{pointer-events:none}
   </style>
+  <!-- Razorpay checkout loader (keep; replace key in JS options) -->
+  <script src="https://checkout.razorpay.com/v1/checkout.js" async></script>
 </head>
 <body>
-  <header>
-    <h1>Start Your Café Journey</h1>
-    <p>12 Modules • 90+ Lessons • Proven Roadmap</p>
+  <header class="top">
+    <div class="container row">
+      <div class="logo">🚀 yuvapreneur.in</div>
+      <div>
+        <button class="btn btn-primary small" onclick="openLogin()">Login</button>
+        <button class="btn btn-outline small" onclick="scrollToId('enroll')">Create account</button>
+      </div>
+    </div>
   </header>
-  <div class="hero">
-    <h2>Start & Grow Your Dream Café – From Idea to Reality</h2>
-    <p>💥 Get the 12-Module Master Guide | Just ₹299 for First 100 Buyers</p>
-    <p><strong>Only 100 Copies at ₹299 — Then ₹1299</strong></p>
-    <button class="cta" style="background-color: orange;" onclick="document.getElementById('form').scrollIntoView({ behavior: 'smooth' })">Buy Now – ₹299</button>
-    
-  </div>
 
-  <section>
-    <div class="card-box">
-  <h2>📚 COURSE MODULES OVERVIEW</h2>
-  <div style="display: flex; flex-direction: column; gap: 20px;">
-    <div class="card-box">
-      <h3>✅ Module 1: Introduction to the Cafe Industry</h3>
-      <p>Understand the types of cafes, market size, organized vs. unorganized sector, and trends shaping the industry.</p>
-    </div>
-    <div class="card-box">
-      <h3>✅ Module 2: Research & Market Analysis</h3>
-      <p>Learn customer behavior, perform SWOT analysis, and define your Unique Selling Proposition (USP).</p>
-    </div>
-    <div class="card-box">
-      <h3>✅ Module 3: Location Selection and Setup</h3>
-      <p>Master the art of choosing the right location, negotiating rent, evaluating competition, and physical space planning.</p>
-    </div>
-    <div class="card-box">
-      <h3>✅ Module 4: Financial Planning and Investment</h3>
-      <p>Understand investment required, monthly budgeting, revenue projection, profit margin, break-even, and funding options.</p>
-    </div>
-    <div class="card-box">
-      <h3>✅ Module 5: Kitchen Setup and Operations</h3>
-      <p>Plan an efficient kitchen layout, essential equipment list, hiring chefs and helpers, managing operations and reducing food waste.</p>
-    </div>
-    <div class="card-box">
-      <h3>✅ Module 6: Hiring and Team Management</h3>
-      <p>Know how to build the right team, write job descriptions, conduct interviews, onboard staff, and manage shifts.</p>
-    </div>
-    <div class="card-box">
-      <h3>✅ Module 7: Menu Design and Pricing</h3>
-      <p>Create a high-margin, balanced menu based on your target audience and cafe theme. Includes menu engineering tips.</p>
-    </div>
-    <div class="card-box">
-      <h3>✅ Module 8: Marketing (Online + Offline)</h3>
-      <p>Launch powerful low-cost promotions, social media marketing, influencer strategies, local ads, and WhatsApp campaigns.</p>
-    </div>
-    <div class="card-box">
-      <h3>✅ Module 9: Growth and Expansion</h3>
-      <p>Scale your business through new outlets, franchising, or cloud kitchens. Learn how to fund and manage growth.</p>
-    </div>
-    <div class="card-box">
-      <h3>✅ Module 10: Legal and Compliance</h3>
-      <p>Understand essential licenses like FSSAI, GST, Fire Safety, and how to stay compliant.</p>
-    </div>
-    <div class="card-box">
-      <h3>✅ Module 11: Crisis Management & Problem Solving</h3>
-      <p>What to do when sales dip? Cost control, new product ideas, influencer marketing, and customer retention tips.</p>
-    </div>
-    <div class="card-box">
-      <h3>✅ Module 12: Success Roadmap for Café</h3>
-      <p>The long-term strategy: branding, financial planning, sustainability, innovation, and team-building for lasting success.</p>
-    </div>
-  </div>
-</div>
+  <main>
+    <!-- HERO -->
+    <section class="hero container" style="padding:48px 0 24px">
+      <span class="badge">Complete Café Business eBook Course</span>
+      <h1>Start your Cafe Journey</h1>
+      <p class="muted" style="margin-top:10px;font-size:18px">12 Modules • 90+ Lessons • Proven Roadmap</p>
 
-    <div class="card-box">
-      <h2>Bonuses You’ll Get</h2>
-      <ul>
-        <li>✅ Menu Templates & Pricing Sheets</li>
-        <li>✅ Hiring SOPs & Training Docs</li>
-        <li>✅ Instagram + WhatsApp Marketing Kit</li>
-        <li>✅ Profit Margin & Break-Even Calculators</li>
-      </ul>
+      <div style="display:flex;gap:16px;align-items:center;margin-top:20px;flex-wrap:wrap">
+        <div class="priceTag">
+          <span>Launch Offer</span>
+          <span class="rupee">₹299</span>
+        </div>
+        <div class="muted small">Will increase to <b>₹799</b> after the timer.<br>
+          <span class="pill">⏳ Offer ends in <span id="countdown">--:--:--</span></span>
+        </div>
+      </div>
+      <div style="display:flex;gap:12px;margin-top:20px;flex-wrap:wrap">
+        <span class="small">🔒 Read‑only — downloads disabled</span>
+        <span class="small">🛡️ Secure account access</span>
+        <span class="small">📖 Modules unlock sequentially</span>
+      </div>
+      <div style="display:flex;gap:12px;margin-top:24px;flex-wrap:wrap">
+        <button class="btn btn-primary" onclick="scrollToId('enroll')">Enroll Now (₹299)</button>
+        <a class="btn btn-outline" href="#modules">See Modules →</a>
+      </div>
+    </section>
+
+    <!-- VISUAL -->
+    <section class="container">
+      <div class="grid grid-2">
+        <div class="card">
+          <img alt="Cafe cover" src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?q=80&w=1200&auto=format&fit=crop" style="width:100%;border-radius:16px;aspect-ratio:16/9;object-fit:cover" />
+          <ul class="clean muted" style="display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:12px;font-size:14px">
+            <li>✔ 90+ lessons</li>
+            <li>✔ 2–4 hrs content</li>
+            <li>✔ Checklists & templates</li>
+            <li>✔ Lifetime access</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3 style="margin:0 0 6px">What you’ll learn — highlights</h3>
+          <ul class="list">
+            <li>Location, costs, and break-even planning</li>
+            <li>Menu engineering & profitable pricing</li>
+            <li>Instagram/GMB growth & local promos</li>
+            <li>Licenses (FSSAI, GST, Fire) and SOPs</li>
+            <li>Customer experience & loyalty blueprint</li>
+            <li>Scale and franchise readiness</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- MODULES -->
+    <section id="modules" class="container" style="padding:32px 0">
+      <h2 style="margin:0 0 16px">What you’ll learn — 12 Modules</h2>
+      <div class="grid grid-2">
+        <!-- 12 modules -->
+        <div class="card">
+          <div class="module"><div class="module-index">1</div><div><b>Introduction to the Café Industry</b><ul class="list"><li>Types of cafés & models</li><li>Indian market & trends</li><li>Opportunities</li></ul></div></div>
+        </div>
+        <div class="card">
+          <div class="module"><div class="module-index">2</div><div><b>Research & Market Analysis</b><ul class="list"><li>Customer segments</li><li>Competitor & SWOT</li><li>Define your USP</li></ul></div></div>
+        </div>
+        <div class="card">
+          <div class="module"><div class="module-index">3</div><div><b>Location Selection & Setup</b><ul class="list"><li>Footfall benchmarks</li><li>Rent ≤ 10% of sales</li><li>Access checklist</li></ul></div></div>
+        </div>
+        <div class="card">
+          <div class="module"><div class="module-index">4</div><div><b>Financial Planning & Investment</b><ul class="list"><li>Startup & monthly costs</li><li>Revenue math</li><li>Break-even</li></ul></div></div>
+        </div>
+        <div class="card">
+          <div class="module"><div class="module-index">5</div><div><b>Kitchen Setup & Operations</b><ul class="list"><li>Layout & zones</li><li>Equipment essentials</li><li>Hygiene SOPs</li></ul></div></div>
+        </div>
+        <div class="card">
+          <div class="module"><div class="module-index">6</div><div><b>Hiring & Team Management</b><ul class="list"><li>Key roles & salaries</li><li>Training plans</li><li>Shift design</li></ul></div></div>
+        </div>
+        <div class="card">
+          <div class="module"><div class="module-index">7</div><div><b>Menu Design & Pricing</b><ul class="list"><li>Menu engineering</li><li>Psychological pricing</li><li>Combos & add‑ons</li></ul></div></div>
+        </div>
+        <div class="card">
+          <div class="module"><div class="module-index">8</div><div><b>Marketing: Online + Offline</b><ul class="list"><li>Instagram & GMB</li><li>Local promos</li><li>Paid ads basics</li></ul></div></div>
+        </div>
+        <div class="card">
+          <div class="module"><div class="module-index">9</div><div><b>Licenses & Compliance</b><ul class="list"><li>FSSAI, GST, Fire</li><li>Shop Act/UDYAM</li><li>Record keeping</li></ul></div></div>
+        </div>
+        <div class="card">
+          <div class="module"><div class="module-index">10</div><div><b>Technology & POS</b><ul class="list"><li>Billing, KDS, inventory</li><li>Delivery integrations</li><li>Analytics dashboards</li></ul></div></div>
+        </div>
+        <div class="card">
+          <div class="module"><div class="module-index">11</div><div><b>Customer Experience & Loyalty</b><ul class="list"><li>Service design</li><li>Feedback loops</li><li>Loyalty blueprint</li></ul></div></div>
+        </div>
+        <div class="card">
+          <div class="module"><div class="module-index">12</div><div><b>Scaling & Franchising</b><ul class="list"><li>Unit economics</li><li>SOPs for replication</li><li>Franchise readiness</li></ul></div></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ENROLL FORM -->
+    <section id="enroll" class="container" style="padding:12px 0 32px">
+      <div class="card">
+        <h2 style="margin-top:0">Create your account</h2>
+        <p class="muted">Fill the form to enroll. You’ll pay securely via Razorpay and get instant access to Module 1. (Demo HTML — connect your backend for OTP, auth, and payment verification.)</p>
+        <form class="two" onsubmit="return enroll(event)">
+          <label class="input"><span>👤</span><input required name="name" placeholder="Full name" /></label>
+          <label class="input"><span>📱</span><input required name="phone" placeholder="Phone number" type="tel" /></label>
+          <label class="input"><span>✉️</span><input required name="email" placeholder="Email" type="email" /></label>
+          <label class="input"><span>🏢</span><input required name="profession" placeholder="Profession" /></label>
+          <label class="input"><span>🏙️</span><input required name="city" placeholder="City" /></label>
+          <label class="input"><span>🗺️</span><input required name="state" placeholder="State" /></label>
+          <label class="input" style="grid-column:1/-1"><span>🔒</span><input required name="password" placeholder="Create password" type="password" /></label>
+          <div style="grid-column:1/-1;display:flex;align-items:center;gap:10px" class="small">
+            <input type="checkbox" id="agree" checked /> <label for="agree">I agree to the Terms and Privacy Policy.</label>
+          </div>
+          <div style="grid-column:1/-1;display:flex;align-items:center;justify-content:space-between">
+            <div class="small muted">Payable today: <b>₹299</b> (will be ₹799 later)</div>
+            <button class="btn btn-primary" type="submit">Enroll & Pay →</button>
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <!-- BONUSES -->
+    <section class="container" style="padding:8px 0 32px">
+      <div style="display:flex;align-items:center;justify-content:space-between;gap:12px">
+        <h2 style="margin:0">Exclusive Bonuses (Optional)</h2>
+        <span class="small muted">Each unlocks in your account — read online only</span>
+      </div>
+      <div class="grid grid-2" style="margin-top:16px">
+        <div class="card">
+          <div style="display:flex;gap:12px;align-items:flex-start">
+            <div class="module-index" aria-hidden>📄</div>
+            <div>
+              <b>Café Menu Psychology Blueprint: Increasing AOV & Satisfaction</b>
+              <p class="muted small">Design a menu that nudges high‑margin choices and lifts your average order value without feeling salesy.</p>
+              <div style="display:flex;align-items:center;justify-content:space-between;margin-top:8px">
+                <div class="small">₹399</div>
+                <button class="btn btn-primary small" onclick="buyBonus('bonus-menu-psychology',399)">Buy & Access →</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div style="display:flex;gap:12px;align-items:flex-start">
+            <div class="module-index" aria-hidden>🏷️</div>
+            <div>
+              <b>Festival & Seasonal Marketing Guide: Strategies to Double Sales</b>
+              <p class="muted small">Plan irresistible festival offers, content, and promos that turn holidays into revenue spikes.</p>
+              <div style="display:flex;align-items:center;justify-content:space-between;margin-top:8px">
+                <div class="small">₹299</div>
+                <button class="btn btn-primary small" onclick="buyBonus('bonus-seasonal-marketing',299)">Buy & Access →</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div style="display:flex;gap:12px;align-items:flex-start">
+            <div class="module-index" aria-hidden>🛡️</div>
+            <div>
+              <b>How to Create a Café Loyalty Program: Simple, Effective Strategies</b>
+              <p class="muted small">Launch a no‑fuss loyalty system that boosts repeat visits — even without expensive software.</p>
+              <div style="display:flex;align-items:center;justify-content:space-between;margin-top:8px">
+                <div class="small">₹249</div>
+                <button class="btn btn-primary small" onclick="buyBonus('bonus-loyalty',249)">Buy & Access →</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div style="display:flex;gap:12px;align-items:flex-start">
+            <div class="module-index" aria-hidden>📷</div>
+            <div>
+              <b>Photography Cheat Sheet: Mouth‑watering Café Food Pics on Phone</b>
+              <p class="muted small">Shoot scroll‑stopping food photos using only your phone — lighting, angles, styling, and quick edits.</p>
+              <div style="display:flex;align-items:center;justify-content:space-between;margin-top:8px">
+                <div class="small">₹229</div>
+                <button class="btn btn-primary small" onclick="buyBonus('bonus-food-photo',229)">Buy & Access →</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="container" style="padding:8px 0 40px">
+      <h2>Q&A — Frequently Asked Questions</h2>
+      <div class="grid">
+        <details class="card"><summary><b>Will I be able to download the eBook?</b></summary><p class="muted">No. Access is read‑only inside your account to protect course IP. Downloads and print are disabled.</p></details>
+        <details class="card"><summary><b>How do modules unlock?</b></summary><p class="muted">After successful payment, Module 1 unlocks instantly. Each subsequent module unlocks after you complete the previous one.</p></details>
+        <details class="card"><summary><b>Is ₹299 a lifetime deal?</b></summary><p class="muted">Yes, for early buyers during the countdown. After the timer, the price switches to ₹799.</p></details>
+        <details class="card"><summary><b>How do I reset my password?</b></summary><p class="muted">Use “Forgot password”. Enter your phone or email to receive an OTP, then set a new password.</p></details>
+        <details class="card"><summary><b>How is payment handled?</b></summary><p class="muted">Payments go through Razorpay’s secure checkout. You’ll be redirected back automatically after success.</p></details>
+      </div>
+      <p class="small muted" style="margin-top:12px">⚠️ If you face any issues, email <a href="mailto:supportyuvapreneur@gmail.com">supportyuvapreneur@gmail.com</a>.</p>
+    </section>
+
+    <!-- READER (demo placeholder) -->
+    <section id="reader" class="container" style="padding-bottom:24px">
+      <div class="card">
+        <h2 style="margin:0 0 8px">Your Course Reader</h2>
+        <p class="muted small" id="readerStatus">Please login to access your modules.</p>
+        <div id="modulesList" class="clean small" style="display:grid;gap:8px;margin-top:8px"></div>
+        <div id="readerContent" class="muted" style="margin-top:12px"></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container" style="display:grid;gap:20px;grid-template-columns:1fr;align-items:start">
+      <div>
+        <b>yuvapreneur.in</b>
+        <p class="muted small">Learn, launch, and grow your café business the right way.</p>
+      </div>
+      <div>
+        <b>Support</b>
+        <p class="muted small">Email: <a href="mailto:supportyuvapreneur@gmail.com">supportyuvapreneur@gmail.com</a></p>
+        <p class="muted small">Refunds & terms available on request.</p>
+      </div>
+      <div>
+        <b>Security</b>
+        <ul class="clean small muted">
+          <li>🔒 Read‑only access (no downloads)</li>
+          <li>🛡️ OTP reset supported</li>
+        </ul>
+      </div>
     </div>
-  </section>
-
-  <section class="price-grid">
-  <div class="price-box" style="border: 3px solid gold;">
-    <h3>🔥 Best Deal – Limited Time</h3>
-    <p><strong>₹299/-</strong></p>
-    <p>For First 100 Customers</p>
-    <ul style="text-align: left; margin-top: 15px;">
-      <li>✅ Full Access to 12 Modules</li>
-      <li>✅ Bonus Templates + Tools</li>
-      <li>✅ Lifetime Access</li>
-      <li>✅ Certificate of Completion</li>
-      <li>✅ WhatsApp Support Group</li>
-      <li>✅ 90+ Practical Lessons</li>
-    </ul>
-    <button class="cta" onclick="document.getElementById('form').scrollIntoView({ behavior: 'smooth' })">Buy Now – ₹299</button>
-  </div>
-
-  <div class="price-box">
-    <h3>🔒 Regular Price</h3>
-    <p><strong>₹1299/-</strong></p>
-    <p>After 100 Buyers</p>
-    <ul style="text-align: left; margin-top: 15px;">
-      <li>✅ Full Access to 12 Modules</li>
-      <li>✅ Bonus Templates</li>
-      <li>✅ Lifetime Access</li>
-      <li>✅ Certificate</li>
-    </ul>
-  </div>
-</section>
-
-  <section class="form" id="form">
-  <h2>📝 Fill the Form to Proceed</h2>
-  <form onsubmit="handleSubmit(event)">
-    <input type="text" placeholder="Full Name" required>
-    <input type="tel" placeholder="Phone Number" required>
-    <input type="email" placeholder="Email Address" required>
-    <input type="text" placeholder="Profession" required>
-    <input type="text" placeholder="City & State" required>
-    <button class="cta" type="submit">Proceed to Payment</button>
-  </form>
-  <p id="paymentLink" style="display:none;margin-top:20px">
-  ✅ Payment Confirmed! Click below to download your eBook:<br>
-  <a href="/mnt/data/cafe%20course%20by%20abhijeet%20pdf.pdf" class="cta" style="background-color: orange; margin-top: 10px; display: inline-block;">Download Café eBook (PDF)</a>
-</p>
-  
-</section>
-
-<script>
-function handleSubmit(event) {
-  event.preventDefault();
-  window.location.href = "https://razorpay.me/@abhijeetvishnuwankhede?amount=EPec5evqGoRk2C8icWNJlQ%3D%3D";
-}
-</script>
-
-  <section class="faq">
-  <h2>📋 Frequently Asked Questions (FAQs)</h2>
-  <div class="card-box">
-    <p><strong>1. Who is this course for?</strong><br>→ This course is perfect for aspiring café owners, students, homemakers, working professionals, or anyone dreaming of starting their own food business.</p>
-    <p><strong>2. Do I need prior experience to join this course?</strong><br>→ No, this course is designed for complete beginners. All topics are explained step-by-step in a beginner-friendly way.</p>
-    <p><strong>3. What language is the course in?</strong><br>→ The course is primarily in <strong>Hindi</strong>, using simple and practical terms that anyone can understand.</p>
-    <p><strong>4. Is this a live course or pre-recorded?</strong><br>→ It is a <strong>pre-recorded course</strong> so you can watch it anytime, anywhere at your own pace.</p>
-    <p><strong>5. Will I get lifetime access?</strong><br>→ Yes! Once you buy the course, you get <strong>lifetime access</strong> to all modules and bonus content.</p>
-    <p><strong>6. Will I receive a certificate after completing the course?</strong><br>→ Yes, you will receive a <strong>digital certificate</strong> upon successful completion.</p>
-    <p><strong>7. What if I have questions or doubts during the course?</strong><br>→ You’ll get access to a <strong>WhatsApp support group</strong> where you can ask questions, plus regular Q&amp;A sessions.</p>
-    <p><strong>8. How is this course different from free YouTube content?</strong><br>→ This course offers a <strong>complete A-to-Z roadmap</strong>, proven strategies, editable documents, and direct support — which you won’t get for free anywhere.</p>
-    <p><strong>9. What’s included in the ₹299 offer?</strong><br>→ Full access to all <strong>12 modules</strong>, bonus tools, templates, community access, and support. This is a <strong>limited-time price</strong> for the first 100 users (then ₹1299).</p>
-    <p><strong>10. Can I open a café after taking this course?</strong><br>→ Yes! You’ll have all the knowledge, tools, and guidance needed to confidently <strong>start and grow your café business</strong>.</p>
-  </div>
-</section>
-
-  <footer>
-    <p>📞 Contact us: support@learnwithabhijeet01@gmail.com</p>
-    <p>Follow: <a href="https://www.instagram.com/abhijeetwankhedeofficial">Instagram</a></p>
-    <p>Created by a Real Café Owner for Real Indian Dreamers.</p>
+    <p class="small muted center">© <span id="yr"></span> yuvapreneur.in • All rights reserved.</p>
   </footer>
 
-  <button class="sticky-cta" onclick="document.getElementById('form').scrollIntoView({ behavior: 'smooth' })">Buy Now – ₹299</button>
+  <!-- LOGIN / FORGOT DIALOG (very simple demo) -->
+  <dialog id="loginDlg" style="border:none;border-radius:16px;max-width:420px;width:calc(100% - 32px);padding:0;">
+    <form method="dialog" class="card" style="margin:0">
+      <h3 style="margin:0 0 8px">Login to your account</h3>
+      <div class="input"><span>✉️</span><input id="loginId" placeholder="Phone or Email" /></div>
+      <div class="input" style="margin-top:8px"><span>🔒</span><input id="loginPass" type="password" placeholder="Password" /></div>
+      <div style="display:flex;align-items:center;justify-content:space-between;margin-top:12px">
+        <button class="btn btn-primary" onclick="return doLogin(event)">Login</button>
+        <button class="btn btn-outline" onclick="return openForgot(event)">Forgot password?</button>
+      </div>
+    </form>
+  </dialog>
+
+  <dialog id="forgotDlg" style="border:none;border-radius:16px;max-width:420px;width:calc(100% - 32px);padding:0;">
+    <form method="dialog" class="card" style="margin:0">
+      <h3 style="margin:0 0 8px">Reset password</h3>
+      <div class="input"><span>✉️</span><input id="fpId" placeholder="Phone or Email" /></div>
+      <div style="display:flex;gap:8px;margin-top:8px">
+        <button class="btn btn-primary" onclick="return sendOtp(event)">Send OTP</button>
+        <span id="otpSentMsg" class="small muted" style="display:none">OTP sent (demo)</span>
+      </div>
+      <div id="otpBlock" class="hidden" style="margin-top:8px">
+        <div class="input"><span>📲</span><input id="fpOtp" placeholder="Enter OTP" /></div>
+        <div class="input" style="margin-top:8px"><span>🔒</span><input id="fpNew" type="password" placeholder="New password" /></div>
+        <button class="btn btn-outline" style="margin-top:8px" onclick="return doReset(event)">Reset Password</button>
+      </div>
+    </form>
+  </dialog>
+
+  <script>
+    // Year
+    document.getElementById('yr').textContent = new Date().getFullYear();
+
+    // Countdown (48h)
+    const target = new Date();
+    target.setHours(target.getHours()+48, 0, 0, 0);
+    const cd = document.getElementById('countdown');
+    setInterval(()=>{
+      const now = new Date();
+      const diff = Math.max(0, target.getTime() - now.getTime());
+      const h = String(Math.floor(diff/3.6e6)).padStart(2,'0');
+      const m = String(Math.floor((diff%3.6e6)/6e4)).padStart(2,'0');
+      const s = String(Math.floor((diff%6e4)/1e3)).padStart(2,'0');
+      cd.textContent = `${h}:${m}:${s}`;
+    },1000);
+
+    // Simple in-memory demo store (NOT PRODUCTION)
+    const store = { users: {}, modulesUnlocked: {} };
+
+    function scrollToId(id){ document.getElementById(id).scrollIntoView({behavior:'smooth'}); }
+
+    function openLogin(){ document.getElementById('loginDlg').showModal(); }
+    function openForgot(e){ e && e.preventDefault(); document.getElementById('loginDlg').close(); document.getElementById('forgotDlg').showModal(); return false; }
+
+    function enroll(e){
+      e.preventDefault();
+      const f = e.target;
+      if(!document.getElementById('agree').checked){ alert('Please accept terms to proceed.'); return false; }
+      const form = Object.fromEntries(new FormData(f).entries());
+      // Create Razorpay order on your backend here, then call window.Razorpay with the returned order_id
+      const options = {
+        key: 'rzp_test_xxxxxxxxxxxxx', // TODO: replace with your live/test key ID
+        amount: 299*100, currency: 'INR', name:'yuvapreneur.in', description:'Café Business 12‑Module eBook Course',
+        handler: function (resp) {
+          // TODO: Verify resp.razorpay_payment_id + signature on backend before granting access
+          const key = form.email || form.phone;
+          store.users[key] = { ...form, paid:true };
+          localStorage.setItem('yuv_userKey', key);
+          alert('Enrollment successful!');
+          document.getElementById('readerStatus').textContent = 'Logged in as '+form.name;
+          renderModules(1);
+        },
+        prefill: { name: form.name, email: form.email, contact: form.phone },
+        theme: { color: '#0f172a' }
+      };
+      if(window.Razorpay){ new window.Razorpay(options).open(); } else { alert('Razorpay not loaded.'); }
+      return false;
+    }
+
+    function doLogin(e){
+      e && e.preventDefault();
+      const id = document.getElementById('loginId').value.trim();
+      const pass = document.getElementById('loginPass').value;
+      const u = store.users[id];
+      if(!u || u.password!==pass){ alert('Invalid credentials.'); return false; }
+      localStorage.setItem('yuv_userKey', id);
+      document.getElementById('loginDlg').close();
+      document.getElementById('readerStatus').textContent = 'Logged in as '+(u.name||'User');
+      renderModules( u.paid ? 1 : 0 );
+      return false;
+    }
+
+    function sendOtp(e){ e && e.preventDefault(); document.getElementById('otpSentMsg').style.display='inline'; document.getElementById('otpBlock').classList.remove('hidden'); return false; }
+    function doReset(e){ e && e.preventDefault(); const id = document.getElementById('fpId').value.trim(); const u = store.users[id]; if(!u){ alert('Account not found.'); return false; } u.password = document.getElementById('fpNew').value; alert('Password updated. Please login.'); document.getElementById('forgotDlg').close(); document.getElementById('loginDlg').showModal(); return false; }
+
+    function renderModules(unlocked){
+      const list = document.getElementById('modulesList');
+      const content = document.getElementById('readerContent');
+      list.innerHTML=''; content.innerHTML='';
+      if(!unlocked){ content.textContent='Please complete payment to unlock Module 1.'; return; }
+      const titles=[
+        'Introduction to the Café Industry','Research & Market Analysis','Location Selection & Setup','Financial Planning & Investment','Kitchen Setup & Operations','Hiring & Team Management','Menu Design & Pricing','Marketing: Online + Offline','Licenses & Compliance','Technology & POS','Customer Experience & Loyalty','Scaling & Franchising'
+      ];
+      for(let i=1;i<=12;i++){
+        const btn = document.createElement('button');
+        btn.textContent = i+'. '+titles[i-1];
+        btn.className = 'btn btn-outline small';
+        btn.style.justifyContent='space-between';
+        btn.style.display='flex';
+        btn.style.width='100%';
+        if(i>unlocked){ btn.disabled=true; btn.style.opacity=.6; }
+        btn.onclick=()=>{
+          content.innerHTML = '<div class="small muted">Module '+i+'</div><h3>'+titles[i-1]+'</h3><p>📖 Reader Mode — your secured content will render here. (Demo HTML)\n<br><span class="kbd">Tip:</span> Stream protected page images/HTML from your server; watermark & disable print/copy.</p>'+
+          '<button class="btn btn-primary small" style="margin-top:8px" onclick="unlockNext('+i+')">Mark as Done</button>';
+        };
+        list.appendChild(btn);
+      }
+      // open first by default
+      list.querySelector('button').click();
+    }
+
+    window.unlockNext = function(current){
+      const next = Math.min(12, current+1);
+      renderModules(next);
+    }
+
+    // Auto-login if present
+    (function(){
+      const k = localStorage.getItem('yuv_userKey');
+      if(k && store.users[k]){ document.getElementById('readerStatus').textContent = 'Logged in as '+(store.users[k].name||'User'); renderModules( store.users[k].paid?1:0 ); }
+    })();
+  </script>
 </body>
 </html>
